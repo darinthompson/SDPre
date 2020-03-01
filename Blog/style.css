@@ -1,0 +1,24 @@
+html {
+  height: 100%;
+}
+
+.bio {
+  display: block;
+  margin: auto;
+}
+
+.personal-info {
+  background-color: #0D4D4D;
+  color: #669999;
+  min-height: 100%;
+}
+
+.blog-area {
+  background-color: #003333;
+  color: #407F7F;
+  min-height: 100%;
+}
+
+h1 {
+  padding-bottom: 25px;
+}
