@@ -51,8 +51,9 @@ public class JavaFXFirst extends Application {
         rect2.setTranslateX(objectposX);
         rect2.setTranslateY(objectposY);
         rect2.setFill(Color.RED);
-        rect2.setWidth(rectWidth);
         rect2.setHeight(rectHeight);
+        rect2.setWidth(rectWidth);
+
 
 
         scene1.setOnKeyPressed(new EventHandler<KeyEvent>() {
@@ -60,29 +61,38 @@ public class JavaFXFirst extends Application {
             public void handle(KeyEvent keyEvent) {
                 switch (keyEvent.getCode()) {
                     case UP:
-                        currentPosY -= 10;
+                        currentPosY -= 5;
                         rect.setTranslateY(currentPosY);
                         System.out.println("going up!");
                         break;
                     case DOWN:
-                        currentPosY += 10;
+                        currentPosY += 5;
                         System.out.println("Going Down!");
                         rect.setTranslateY(currentPosY);
                         break;
                     case LEFT:
-                        currentPosX -= 10;
+                        currentPosX -= 5;
                         System.out.println("Going Left!");
                         rect.setTranslateX(currentPosX);
                         break;
                     case RIGHT:
-                        currentPosX += 10;
+                        currentPosX += 5;
                         System.out.println("Going Right!");
                         rect.setTranslateX(currentPosX);
                         break;
                 }
+
                 if(currentPosX == objectposX && currentPosY == objectposY) {
                     rect.setWidth(rectWidth *= 1.25);
+                    Random randy = new Random(0);
+                    int x = randNum();
+                    int y = randNum();
+                    objectposX = x;
+                    objectposY = y;
+                    rect2.setTranslateX(objectposX);
+                    rect2.setTranslateY(objectposY);
                 }
+
                 System.out.println("Current Position: x = " + currentPosX  + " y = " + currentPosY);
                 System.out.println("Object Position: x = " + objectposX + " y: " + objectposY);
             }
@@ -93,5 +103,14 @@ public class JavaFXFirst extends Application {
         stage.setScene(scene1);
         stage.show();
 
+    }
+
+    public int randNum() {
+        int num;
+        Random randy = new Random();
+        do {
+             num = randy.nextInt(viewWidth);
+        } while(num % 5 != 0);
+        return num;
     }
 }
