@@ -1,5 +1,6 @@
 # SDPre
 
-Hello World!
+This is my prework Git file for Skill Distillery.
+If you would like you can head over to my blog and read about some basics of programming using specifically the Java language.
 
-Just an edit to see if my terminal settings are working properly.
+Link: darinthompson.github.io

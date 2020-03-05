@@ -87,7 +87,7 @@ public class JavaFXFirst extends Application {
                         break;
                     case SPACE:
                         l.setText("*");
-                        tt.setFromX(currentPosX + 15);
+                        tt.setFromX(currentPosX + 10);
                         tt.setFromY(currentPosY  - 60);
                         tt.setToY(currentPosY - viewHeight);
                         tt.play();
