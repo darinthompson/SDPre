@@ -1,11 +1,12 @@
-public class DoubleyLinkedList {
+public class DoublyLinkedList {
     
-    Node head;
+    Node head = null;
     
     public void insert(int data) {
         Node nody = new Node();
         nody.data = data;
         nody.next = null;
+        nody.prev = null;
         // nody.prev = null;
 
         if(head == null) {
