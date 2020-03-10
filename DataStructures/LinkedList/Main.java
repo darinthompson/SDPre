@@ -7,6 +7,10 @@ public class Main {
         list.insertHead(35);
         list.insertTail(15);
         list.Insert(3, 22);
+        list.DeleteAt(0);
+        list.DeleteAt(3);
+        list.DeleteAt(8);
+        list.DeleteTail();
         list.display();        
     }
 }
